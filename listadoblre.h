@@ -23,5 +23,6 @@ Lista * newLista ();
 void insertarNodo (Lista * lista, Nodo * nodo);
 void imprimir (Lista * lista);
 void eliminarNodo (Lista * lista, int valorAEliminar);
+int buscarValor (Lista * lista, int valorABuscar);
 
 #endif //LISTA_DOBLEMENTE_ENLAZADA_LISTADOBLRE_H

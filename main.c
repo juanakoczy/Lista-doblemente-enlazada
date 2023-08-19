@@ -20,5 +20,9 @@ int main() {
     printf ("\n");
     imprimir(lista);
 
+    printf ("\n");
+
+    buscarValor(lista,5);
+
     return 0;
 }

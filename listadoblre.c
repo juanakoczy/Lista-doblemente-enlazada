@@ -65,7 +65,7 @@ else{
         act = act->sig;
     }
     if (act==NULL){// quiere decir que se encuenta en el ultimo campo de la lista
-        printf("El valor no esta enla lista.\n");
+        printf("El valor no esta en la lista.\n");
     }
     else{
         if(act==lista->cabecera){//si es el primer elemento de la lista cambio la cabecera
@@ -78,4 +78,35 @@ else{
     }
 }
 
+}
+
+int buscarValor (Lista * lista, int valorABuscar){
+    int cont = 0;
+    if (lista->cabecera==NULL)
+        printf("la lista esta vacia.\n");
+
+    else{
+
+        Nodo * ant = lista->cabecera;
+        Nodo * act = ant;
+
+        while (act != NULL && act->dato != valorABuscar){
+            ant = act;
+            act = act->sig;
+
+        }
+        if (act==NULL){// quiere decir que se encuenta en el ultimo campo de la lista
+            printf("El valor no esta en la lista.\n");
+        }
+        else{
+            if(act==lista->cabecera){//si es el primer elemento de la lista cambio la cabecera
+                lista->cabecera = act->sig;
+                printf ("El valor %d es el primero de la lista.\n",valorABuscar);
+            }else {
+                ant->sig = act->sig;
+                cont ++;
+                printf ("El valor %d esta en la posicion %d.\n",valorABuscar,cont+1);
+            }
+        }
+    }
 }
